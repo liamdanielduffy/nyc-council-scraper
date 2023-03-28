@@ -7,7 +7,6 @@ app.get("/", async (req: Request, res: Response) => {
   const browser: Browser = await puppeteer.launch({ args: ["--no-sandbox"] });
   const page = await browser.newPage();
   await page.goto("https://example.com");
-  await page.click("#element-to-click");
   const content: string = await page.content();
   await browser.close();
   res.send(content);
