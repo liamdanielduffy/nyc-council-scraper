@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "postinstall": "apt-get update && apt-get install -y chromium-browser"
+    "postinstall": "apt-get update && apt-get install -y chromium-browser && ln -sf /usr/bin/chromium-browser /usr/local/bin/chromium"
   },
   "dependencies": {
     "@types/express": "^4.17.17",
