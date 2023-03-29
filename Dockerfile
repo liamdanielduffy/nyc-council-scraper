@@ -11,8 +11,7 @@ RUN yarn
 COPY . .
 
 # Install Chromium
-RUN apt-get update && apt-get install -y chromium-browser && ln -sf /usr/bin/chromium-browser /usr/local/bin/chromium
-
+RUN apt-get update && apt-get install -y chromium && ln -sf /usr/bin/chromium /usr/local/bin/chromium
 
 # Expose port 3000 to the host
 EXPOSE 3000
